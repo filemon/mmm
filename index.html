@@ -1,0 +1,43 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Your nickname</h1>
+    <form id="inputForm">
+        <label for="userInput">Text: </label>
+        <input type="text" id="userInput" name="userInput">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('inputForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const userInput = document.getElementById('userInput').value;
+
+            // Replace spaces with non-breaking spaces
+//            const formattedInput = userInput.replace(/ /g, '\u00A0');
+
+            // Set the result with the prefixed text
+            const result = document.getElementById('result');
+            result.innerText = `\u2432\u2432\u2432\u00A0|\u00A0${formattedInput}`;
+        });
+    </script>
+</body>
+</html>
