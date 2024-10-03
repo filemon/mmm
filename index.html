@@ -16,13 +16,13 @@
     </style>
 </head>
 <body>
-    <h1>Enter Your nickname</h1>
+    <h1>Enter your nickname</h1>
     <form id="inputForm">
-        <label for="userInput">Text: </label>
+        <label for="userInput">Nick: </label>
         <input type="text" id="userInput" name="userInput">
         <button type="submit">Submit</button>
     </form>
-    <div id="result"></div>
+    <div id="result"> <p>Copy-paste this to game </p><textarea id="myTextArea" rows="1" cols="30">MMM</textarea></div>
 
     <script>
         document.getElementById('inputForm').addEventListener('submit', function(event) {
@@ -34,8 +34,8 @@
             const formattedInput = userInput.replace(/ /g, '\u00A0');
 
             // Set the result with the prefixed text
-            const result = document.getElementById('result');
-            result.innerText = `\u1D0D\u1D0D\u1D0D\u00A0${formattedInput}`;
+            const result = document.getElementById('myTextArea');
+            result.value = `\u1D0D\u1D0D\u1D0D\u00A0${formattedInput}`;
         });
     </script>
 </body>
