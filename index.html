@@ -22,7 +22,11 @@
         <input type="text" id="userInput" name="userInput">
         <button type="submit">Submit</button>
     </form>
-    <div id="result"> <p>Copy-paste this to game </p><textarea id="myTextArea" rows="1" cols="30">MMM</textarea></div>
+    <div id="result">
+      <p>Copy-paste this to game </p>
+      <textarea id="myTextArea" rows="1" cols="30">&#x1D0D;&#x00B3;</textarea>
+      <textarea id="myTextArea2" rows="1" cols="30">&#x1D0D;&#x1D0D;&#x1D0D;</textarea>
+    </div>
 
     <script>
         document.getElementById('inputForm').addEventListener('submit', function(event) {
@@ -34,8 +38,11 @@
             const formattedInput = userInput.replace(/ /g, '\u00A0');
 
             // Set the result with the prefixed text
-            const result = document.getElementById('myTextArea');
-            result.value = `\u1D0D\u1D0D\u1D0D\u00A0${formattedInput}`;
+            const nick1 = document.getElementById('myTextArea');
+            nick1.value = `\u1D0D\u00B3\u00A0${formattedInput}`;
+            const nick2 = document.getElementById('myTextArea2');
+            nick2.value = `\u1D0D\u1D0D\u1D0D\u00A0${formattedInput}`;
+
         });
     </script>
 </body>
